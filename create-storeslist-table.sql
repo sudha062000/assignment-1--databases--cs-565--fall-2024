@@ -1,6 +1,8 @@
-CREATE TABLE IF NOT EXISTS storelist (
+CREATE TABLE IF NOT EXISTS storeslist 
+(
+
     store_id          VARCHAR(14)  NOT NULL,
     store_name        VARCHAR(64)  NOT NULL,
-    comment           TINYTEXT      DEFAULT NULL, -- A comment of up to 255 chars, with each character taking up 1 byte is appropriate. Note that multibyte chars take up at least 2.
-    PRIMARY KEY (store_id)
+    comment           TINYTEXT      
+    
 );
