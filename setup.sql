@@ -13,3 +13,4 @@ SOURCE create-spices-table.sql;
 SOURCE populate-spices-table.sql;
 SOURCE create-storeslist-table.sql;
 SOURCE create-storeurl-table.sql;
+SOURCE create-purchasedspices-table.sql;
