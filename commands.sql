@@ -31,3 +31,8 @@ WHERE physical_address AND url_address is NOT NULL;
    LIKE '%cinnamon%';
 
 -- Get the brand name of the Sumac spice and the name and URL of the store where it was purchased.
+SELECT s.brand, su.store_name, su.url_address 
+FROM spices s 
+JOIN  purchasedspices ps ON s.spice_name = ps.spice_name 
+JOIN storeurl su ON ps.store_id = su.store_id
+ WHERE s.spice_name = 'Sumac';
