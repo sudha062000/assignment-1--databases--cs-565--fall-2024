@@ -11,10 +11,18 @@
  ON ps.store_id = su.store_id; 
 
 -- Get stores who only have an online address.
-
+SELECT store_name 
+FROM storeurl
+WHERE physical_address is  NULL; 
 -- Get stores who have an online and a physical address.
+SELECT store_name 
+FROM storeurl 
+WHERE physical_address AND url_address is NOT NULL;
 
 -- Get spices whose names are also brands. For example, Fresh Direct is a store that also makes spices.
+ SELECT spice_name 
+ FROM spices WHERE 
+ spice_name in (SELECT DISTINCT brand FROM spices);
 
 -- Get spices whose names contain “cinnamon”.
    SELECT spice_name
